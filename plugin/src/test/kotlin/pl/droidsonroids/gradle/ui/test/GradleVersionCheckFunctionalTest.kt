@@ -1,7 +1,8 @@
 package pl.droidsonroids.gradle.ui.test
 
-import org.assertj.core.api.Assertions
 import org.gradle.testkit.runner.GradleRunner
+import org.junit.Rule
+import org.junit.Test
 
 class GradleVersionCheckFunctionalTest {
     @get:Rule

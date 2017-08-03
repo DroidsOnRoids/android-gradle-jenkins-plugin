@@ -1,7 +1,8 @@
 package pl.droidsonroids.gradle.ui.test
 
-import org.assertj.core.api.Assertions.assertThat
 import org.gradle.testkit.runner.GradleRunner
+import org.junit.Rule
+import org.junit.Test
 import pl.droidsonroids.gradle.ui.test.Constants.CONNECTED_SETUP_REVERT_UI_TEST_TASK_NAME
 import pl.droidsonroids.gradle.ui.test.Constants.CONNECTED_SETUP_UI_TEST_TASK_NAME
 import pl.droidsonroids.gradle.ui.test.Constants.SPOON_TASK_NAME

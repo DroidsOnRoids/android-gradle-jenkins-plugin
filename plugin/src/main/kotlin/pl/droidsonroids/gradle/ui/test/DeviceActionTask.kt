@@ -1,6 +1,6 @@
 package pl.droidsonroids.gradle.ui.test
 
-import com.android.build.gradle.AppExtension
+import com.android.build.gradle.TestedExtension
 import com.android.ddmlib.AndroidDebugBridge
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
@@ -19,7 +19,7 @@ abstract class DeviceActionTask : DefaultTask() {
     }
 
     @Input
-    fun appExtension(android: AppExtension) {
+    fun testedExtension(android: TestedExtension) {
         bridge = AndroidDebugBridge.createBridge(android.adbExecutable.path, false) ?: throw GradleException("Could not create AndroidDebugBridge")
     }
 

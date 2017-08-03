@@ -2,6 +2,7 @@ plugins {
     id 'pl.droidsonroids.ui.test'
     id 'com.android.application'
 }
+
 android {
     defaultConfig {
         applicationId 'pl.droidsonroids.testapplication'
@@ -9,4 +10,11 @@ android {
     }
     buildToolsVersion '26.0.1'
     compileSdkVersion 26
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a'
+        }
+    }
 }

@@ -2,8 +2,6 @@ package pl.droidsonroids.gradle.ui.test
 
 import org.assertj.core.api.Assertions
 import org.gradle.testkit.runner.GradleRunner
-import org.junit.Rule
-import org.junit.Test
 
 class GradleVersionCheckFunctionalTest {
     @get:Rule
@@ -11,7 +9,7 @@ class GradleVersionCheckFunctionalTest {
 
     @Test
     fun `build fails if Gradle version not supported`() {
-        temporaryFolder.copyResource("build.gradle", "build.gradle")
+        temporaryFolder.copyResource("simple.gradle", "build.gradle")
 
         val gradleVersion = "3.3"
         val result = GradleRunner.create()

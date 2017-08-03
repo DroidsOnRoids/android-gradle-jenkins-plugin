@@ -1,0 +1,12 @@
+plugins {
+    id 'pl.droidsonroids.ui.test'
+    id 'com.android.library'
+}
+
+android {
+    defaultConfig {
+        minSdkVersion 1
+    }
+    buildToolsVersion '26.0.1'
+    compileSdkVersion 26
+}

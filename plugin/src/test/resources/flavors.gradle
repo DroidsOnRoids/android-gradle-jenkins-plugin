@@ -1,0 +1,17 @@
+plugins {
+    id 'pl.droidsonroids.ui.test'
+    id 'com.android.application'
+}
+
+android {
+    defaultConfig {
+        applicationId 'pl.droidsonroids.testapplication'
+        minSdkVersion 1
+    }
+    buildToolsVersion '26.0.1'
+    compileSdkVersion 26
+    productFlavors {
+        free {}
+        pro {}
+    }
+}

@@ -1,10 +1,8 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
 internal object Constants {
 
     val ADB_COMMAND_TIMEOUT_MILLIS = 30000
-
-    val DISABLE_PREDEX_PROPERTY_NAME = "pl.droidsonroids.jenkins.disablepredex"
 
     val CONNECTED_UI_TEST_TASK_NAME = "connectedUiTest"
     val SPOON_TASK_NAME = "spoon"

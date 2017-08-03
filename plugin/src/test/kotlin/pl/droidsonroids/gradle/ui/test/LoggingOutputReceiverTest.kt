@@ -1,4 +1,4 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
 import com.android.utils.ILogger
 import com.nhaarman.mockito_kotlin.any

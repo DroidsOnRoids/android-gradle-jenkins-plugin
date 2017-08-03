@@ -6,8 +6,6 @@ See [Gradle plugin portal](https://plugins.gradle.org/plugin/pl.droidsonroids.ui
 
 ## Features
 - ADB connection timeout increased to 30s
-- Ability to disable pre dexing (if appropriate property is set), useful on CI servers.
- [More info](http://www.littlerobots.nl/blog/disable-android-pre-dexing-on-ci-builds/).
 - [spoon Gradle plugin](https://github.com/stanfy/spoon-gradle-plugin) integrated
 - Preparation of connected device/AVD to instrumented (e.g. using espresso) tests - unlocking screen, disabling animations,
  adding sample media files to multimedia provider

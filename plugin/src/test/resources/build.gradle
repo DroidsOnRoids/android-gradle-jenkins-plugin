@@ -1,5 +1,5 @@
 plugins {
-    id 'pl.droidsonroids.jenkins'
+    id 'pl.droidsonroids.ui.test'
     id 'com.android.application'
 }
 android {

@@ -1,4 +1,4 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
 import com.android.ddmlib.IDevice
 import com.android.utils.StdLogger

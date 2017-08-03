@@ -1,4 +1,4 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
 import org.junit.rules.TemporaryFolder
 import java.io.File

@@ -1,4 +1,4 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
 import org.gradle.testkit.runner.GradleRunner
 import java.io.File

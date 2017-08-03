@@ -1,6 +1,7 @@
-package pl.droidsonroids.gradle.ci
+package pl.droidsonroids.gradle.ui.test
 
-import com.android.build.gradle.*
+import com.android.build.gradle.AppExtension
+import com.android.build.gradle.AppPlugin
 import com.android.ddmlib.DdmPreferences
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
@@ -17,19 +18,10 @@ class UiTestPlugin : Plugin<Project> {
         project.allprojects { subproject ->
             subproject.pluginManager.apply(BasePlugin::class.java)
 
-            val disablePredex = subproject.hasProperty(Constants.DISABLE_PREDEX_PROPERTY_NAME)
             subproject.plugins.withType(AppPlugin::class.java) {
                 val android = subproject.getAndroidExtension<AppExtension>()
 
                 subproject.configureUiTests(android)
-
-                android.setDexOptions(disablePredex)
-            }
-            subproject.plugins.withType(LibraryPlugin::class.java) {
-                subproject.getAndroidExtension<LibraryExtension>().setDexOptions(disablePredex)
-            }
-            subproject.plugins.withType(TestPlugin::class.java) {
-                subproject.getAndroidExtension<TestExtension>().setDexOptions(disablePredex)
             }
         }
     }

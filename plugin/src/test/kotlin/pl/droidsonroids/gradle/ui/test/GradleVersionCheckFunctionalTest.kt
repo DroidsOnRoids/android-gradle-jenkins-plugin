@@ -1,5 +1,6 @@
 package pl.droidsonroids.gradle.ui.test
 
+import org.assertj.core.api.Assertions.assertThat
 import org.gradle.testkit.runner.GradleRunner
 import org.junit.Rule
 import org.junit.Test
@@ -21,6 +22,6 @@ class GradleVersionCheckFunctionalTest {
                 .withJaCoCo()
                 .buildAndFail()
 
-        Assertions.assertThat(result.output).contains("Gradle version $gradleVersion is not supported")
+        assertThat(result.output).contains("Gradle version $gradleVersion is not supported")
     }
 }

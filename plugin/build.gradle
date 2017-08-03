@@ -40,7 +40,7 @@ pluginBundle {
 
     plugins {
         jenkinsPlugin {
-            id = 'pl.droidsonroids.jenkins'
+            id = 'pl.droidsonroids.ui.test'
             displayName = POM_NAME
             description = POM_DESCRIPTION
         }

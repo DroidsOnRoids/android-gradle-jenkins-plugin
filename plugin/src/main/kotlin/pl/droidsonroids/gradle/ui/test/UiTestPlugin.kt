@@ -8,7 +8,7 @@ import org.gradle.api.Project
 import org.gradle.api.plugins.BasePlugin
 import org.gradle.util.GradleVersion
 
-class CIPlugin : Plugin<Project> {
+class UiTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         checkGradleVersion()
 

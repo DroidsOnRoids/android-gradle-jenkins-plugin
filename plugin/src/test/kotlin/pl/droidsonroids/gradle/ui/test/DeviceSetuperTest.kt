@@ -39,7 +39,7 @@ class DeviceSetuperTest {
         verify(device).executeShellCommand(eq("settings put global transition_animation_scale 0"), any(), anyLong(), any())
         verify(device).executeShellCommand(eq("settings put global animator_duration_scale 0"), any(), anyLong(), any())
         verify(device, atLeastOnce()).pushFile(anyString(), ArgumentMatchers.anyString())
-        verify(device, atLeastOnce()).executeShellCommand(Mockito.argThat { it.startsWith(Constants.MEDIA_SCAN_COMMAND) }, any(), anyLong(), any())
+        verify(device, atLeastOnce()).executeShellCommand(Mockito.argThat { it.startsWith(MEDIA_SCAN_COMMAND) }, any(), anyLong(), any())
         verify(device).executeShellCommand(eq("su 0 pm disable com.android.browser"), any(), anyLong(), any())
         verify(device).executeShellCommand(eq("su 0 pm hide org.chromium.webview_shell"), any(), anyLong(), any())
 

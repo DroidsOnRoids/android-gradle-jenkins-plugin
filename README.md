@@ -18,10 +18,17 @@ plugins {
 }
 
 apply plugin: 'com.android.application'
+
+uiTest {
+    uiTestReporter 'test%sComposer'
+}
 ```
+
+`uiTestReporter` takes test task pattern as an argument. It may be for example `'test%sComposer'`
+if you are using [composer](https://github.com/trevjonez/composer-gradle-plugin) 
+or `'spoon%s'` for [spoon](https://github.com/stanfy/spoon-gradle-plugin).
 
 ### Available tasks
 - `connectedUiTest` - setup, testing with spoon and revert to default settings 
 - `connectedSetupUiTest` - setup only 
-- `spoon` - testing only 
 - `connectedSetupRevertUiTest` - setup revert only 

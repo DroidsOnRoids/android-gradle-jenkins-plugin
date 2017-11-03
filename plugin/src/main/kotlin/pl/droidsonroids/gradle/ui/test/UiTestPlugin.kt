@@ -15,7 +15,7 @@ class UiTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         checkGradleVersion()
 
-        DdmPreferences.setTimeOut(Constants.ADB_COMMAND_TIMEOUT_MILLIS)
+        DdmPreferences.setTimeOut(ADB_COMMAND_TIMEOUT_MILLIS)
 
         project.allprojects { subproject ->
             subproject.pluginManager.apply(BasePlugin::class.java)
@@ -32,10 +32,10 @@ class UiTestPlugin : Plugin<Project> {
     }
 
     private fun checkGradleVersion() {
-        val minimumSupportedGradleVersion = GradleVersion.version("3.4")
+        val minimumSupportedGradleVersion = GradleVersion.version("4.1")
         if (GradleVersion.current() < minimumSupportedGradleVersion) {
             throw GradleException("Gradle version ${GradleVersion.current().version} is not supported. Use Gradle Wrapper or Gradle version >= ${minimumSupportedGradleVersion.version}")
         }
     }
-
 }
+

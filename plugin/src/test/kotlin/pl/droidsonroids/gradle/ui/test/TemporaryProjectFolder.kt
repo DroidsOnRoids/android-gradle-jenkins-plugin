@@ -8,5 +8,5 @@ class TemporaryProjectFolder : TemporaryFolder() {
     fun copyResource(resourceName: String, fileName: String) =
             javaClass.classLoader.getResourceAsStream(resourceName).toFile(projectFile(fileName))
 
-    fun projectFile(fileName: String) = File(root, fileName)
+    private fun projectFile(fileName: String) = File(root, fileName)
 }

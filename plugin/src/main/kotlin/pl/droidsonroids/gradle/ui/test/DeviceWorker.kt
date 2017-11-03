@@ -9,7 +9,7 @@ abstract class DeviceWorker {
     private val outputReceiver = LoggingOutputReceiver(logger)
 
     fun IDevice.executeRemoteCommand(remoteCommand: String) =
-            executeShellCommand(remoteCommand, outputReceiver, Constants.ADB_COMMAND_TIMEOUT_MILLIS.toLong(), TimeUnit.MILLISECONDS)
+            executeShellCommand(remoteCommand, outputReceiver, ADB_COMMAND_TIMEOUT_MILLIS.toLong(), TimeUnit.MILLISECONDS)
 
     abstract fun doWork(device: IDevice)
 }

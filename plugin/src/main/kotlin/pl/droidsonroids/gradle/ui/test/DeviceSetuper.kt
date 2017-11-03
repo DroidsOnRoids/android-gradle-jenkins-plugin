@@ -24,7 +24,7 @@ class DeviceSetuper : DeviceWorker() {
 
         arrayOf("image_portrait.jpg", "image_square.jpg", "video.mp4").forEach { name ->
             val file = pushFile(device, name, "/sdcard/")
-            device.executeRemoteCommand("${Constants.MEDIA_SCAN_COMMAND}$file")
+            device.executeRemoteCommand("$MEDIA_SCAN_COMMAND$file")
         }
         device.executeRemoteCommand("su 0 pm disable com.android.browser")
         device.executeRemoteCommand("su 0 pm hide org.chromium.webview_shell")

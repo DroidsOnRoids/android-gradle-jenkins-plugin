@@ -6,12 +6,18 @@ plugins {
 android {
     defaultConfig {
         applicationId 'pl.droidsonroids.testapplication'
-        minSdkVersion 1
     }
-    buildToolsVersion '26.0.1'
-    compileSdkVersion 26
+    compileSdkVersion 27
+    flavorDimensions 'tier'
     productFlavors {
         free {}
         pro {}
     }
 }
+
+uiTest {
+    uiTestReporter 'test%sComposer'
+}
+
+task(testFreeDebugComposer)
+task(testProDebugComposer)

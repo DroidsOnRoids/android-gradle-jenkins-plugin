@@ -53,7 +53,7 @@ class ConnectedUiTestFunctionalTest {
         val result = GradleRunner.create()
                 .withProjectDir(temporaryFolder.root)
                 .withTestKitDir(temporaryFolder.newFolder())
-                .withArguments("connectedUiTest")
+                .withArguments("connectedFreeDebugUiTest")
                 .withPluginClasspath()
                 .withJaCoCo()
                 .buildAndFail()

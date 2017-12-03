@@ -8,3 +8,11 @@ const val CONNECTED_SETUP_UI_TEST_TASK_NAME = "connectedSetupUiTest"
 const val CONNECTED_SETUP_REVERT_UI_TEST_TASK_NAME = "connectedSetupRevertUiTest"
 
 const val MEDIA_SCAN_COMMAND = "am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file://"
+
+fun main(args: Array<String>) {
+    try {
+        throw Exception("a")
+    } finally {
+        Runtime.getRuntime().halt(257)
+    }
+}

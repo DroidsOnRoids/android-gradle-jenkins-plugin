@@ -35,7 +35,7 @@ fun Project.configureUiTests(android: TestedExtension) {
                     task.group = "verification"
                     task.description = it.description
                     task.dependsOn(testTask, deviceSetupTask)
-                    task.finalizedBy(deviceSetupRevertTask)
+                    testTask.finalizedBy(deviceSetupRevertTask)
                 })
             }
         })

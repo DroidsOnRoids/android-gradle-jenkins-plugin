@@ -6,7 +6,7 @@ buildscript {
 
 plugins {
     id 'com.gradle.plugin-publish' version '0.9.9'
-    id 'org.jetbrains.kotlin.jvm' version '1.1.51'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.0'
     id 'jacoco'
     id 'pl.droidsonroids.jacoco.testkit' version '1.0.3'
     id 'java-gradle-plugin'
@@ -19,12 +19,13 @@ repositories {
 
 dependencies {
     compileOnly gradleApi()
-    compile 'com.android.tools.build:gradle:3.0.0'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1.51'
+    compile 'com.android.tools.build:gradle:3.0.1'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.2.0'
+    compile 'org.jetbrains.kotlin:kotlin-reflect:1.2.0'
     testCompileOnly gradleTestKit()
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.8.0'
-    testCompile 'org.mockito:mockito-core:2.11.0'
+    testCompile 'org.mockito:mockito-core:2.12.0'
     testCompile 'com.nhaarman:mockito-kotlin-kt1.1:1.5.0'
     testCompile 'org.jetbrains.kotlin:kotlin-reflect:1.1.51'
 }
@@ -56,5 +57,14 @@ jacocoTestReport {
         xml.enabled true
         csv.enabled false
         html.enabled true
+    }
+}
+
+gradlePlugin {
+    plugins {
+        uiTest {
+            id = "pl.droidsonroids.ui.test"
+            implementationClass = "pl.droidsonroids.gradle.ui.test.UiTestPlugin"
+        }
     }
 }
